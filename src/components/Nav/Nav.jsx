@@ -1,20 +1,21 @@
 import React from "react";
 import { Link } from "gatsby";
+import classes from './Nav.module.css';
 
 const Nav = () => (
-  <nav>
-    <ul>
-      <li>
-        <Link to="/">Home</Link>
+  <nav className={classes.nav}>
+    <ul className={classes.nav__list}>
+      <li className={classes.nav__item}>
+        <Link to="/" activeStyle={{ borderBottom: "2px solid #371A2B" }}>Home</Link>
       </li>
-      <li>
-        <Link to="/about">About</Link>
+      <li className={classes.nav__item}>
+        <Link to="/about" activeStyle={{ borderBottom: "2px solid #371A2B" }}>About</Link>
       </li>
-      <li>
-        <Link to="/blog">Blog</Link>
+      <li className={classes.nav__item}>
+        <Link to="/blog" activeStyle={{ borderBottom: "2px solid #371A2B" }}>Blog</Link>
       </li>
-      <li>
-        <Link to="/contact">Contact</Link>
+      <li className={classes.nav__item}>
+        <Link to="/contact" activeStyle={{ borderBottom: "2px solid #371A2B" }}>Contact</Link>
       </li>
     </ul>
   </nav>

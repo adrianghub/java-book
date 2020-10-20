@@ -1,11 +1,12 @@
 import React from "react";
 
 import Nav from "../Nav/Nav";
+import classes from './Layout.module.css'
 
 const Layout = ({ children }) => (
   <>
     <Nav />
-    <main>{ children }</main>
+    <main className={classes.main}>{ children }</main>
   </>
 );
 
