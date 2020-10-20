@@ -1,19 +1,20 @@
 import React from "react";
+import { Link } from "gatsby";
 
 const Nav = () => (
   <nav>
     <ul>
       <li>
-        <a href="/">Home</a>
+        <Link to="/">Home</Link>
       </li>
       <li>
-        <a href="/about">About</a>
+        <Link to="/about">About</Link>
       </li>
       <li>
-        <a href="/blog">Blog</a>
+        <Link to="/blog">Blog</Link>
       </li>
       <li>
-        <a href="/contact">Contact</a>
+        <Link to="/contact">Contact</Link>
       </li>
     </ul>
   </nav>
