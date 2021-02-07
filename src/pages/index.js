@@ -3,7 +3,7 @@ import Layout from "../components/Layout/Layout"
 
 const Home = () => (
   <Layout>
-    <h1>Home</h1>
+    <h1>java.book</h1>
 
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea dignissimos
