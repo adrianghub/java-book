@@ -1,17 +1,26 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
+import Img from "gatsby-image"
+
 
 import Layout from "../../components/Layout/Layout"
 import classes from "./blogTemplate.module.css"
 
 export default function Template({ data }) {
   const post = data.markdownRemark
-  const { title, author, date } = post.frontmatter
+  const { title, author, date, featured } = post.frontmatter
 
   return (
     <div className={classes.blogTemplate}>
       <Layout>
         <Link to="/blog" className={classes.blogTemplate__link}>Back to all blogs</Link>
+        {featured && (
+        <Img
+        className={classes.blogTemplate__img}
+        fluid={featured.childImageSharp.fluid}
+        alt={title}
+        />
+        )}
         <h1 className={classes.blogTemplate__title}>{title}</h1>
         <p className={classes.blogTemplate__author}>
           Posted by {author} on {date}
@@ -29,7 +38,14 @@ export const postQuery = graphql`
         title
         path
         author
-        date
+        date(formatString: "DD MMMM, YYYY")
+        featured {
+          childImageSharp {
+            fluid(maxWidth: 750) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
       html
     }

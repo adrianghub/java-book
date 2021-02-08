@@ -9,3 +9,7 @@
 .blogTemplate .blogTemplate__link {
   color: #fff;
 }
+
+.blogTemplate .blogTemplate__img {
+  margin: 20px 0;
+}
