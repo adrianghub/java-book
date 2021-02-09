@@ -9,7 +9,7 @@ const Blog = ({ data }) => (
     <h1>Blog</h1>
     { 
       data.allMarkdownRemark.edges.map(post => {
-        const { title, author, date, description, path } = post.node.frontmatter;
+        const { title, author, date, description, path, featured } = post.node.frontmatter;
         return (
           <Post
             title={title}
@@ -18,6 +18,7 @@ const Blog = ({ data }) => (
             description={description}
             key={`${date}__${title}`}
             path={path}
+            featured={featured}
           />
         )
       })
@@ -33,11 +34,18 @@ query AllBlogPosts {
     edges {
       node {
         frontmatter {
-          date
+          date(formatString: "DD MMMM, YYYY")
           title
           author
           path
           description
+          featured {
+            childImageSharp {
+              fluid(maxWidth: 750) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
       }
     }
