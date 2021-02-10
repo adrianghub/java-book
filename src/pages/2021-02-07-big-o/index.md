@@ -27,7 +27,7 @@ Now that you know what O-notation is all about, it will be easier for you to com
 
 To understand how algorithm complexity is computed, let's use an example. If we have a set of **n** elements in the array and for each of them we have to perform one computation, the total number of computations in the algorithm will be linearly dependent on the number of elements in the array. We then say that the algorithm has a computational complexity of:
 
-**O(n)**
+<center>O(n)</center>
 
 where **n** is the amount of input data.
 
@@ -35,7 +35,7 @@ In a situation where the algorithm performs more complex calculations, for examp
 
 The complexity of the presented algorithm is:
 
-**O(i * k)**
+<center>O(i * k)</center>
 
 To simplify this notation a bit, it is assumed that the values of **i** and **k** are equally large and are marked with one variable **n**. Remember the asymptotes from mathematics? These were the lines in the graphs that the function tended to but never reached. O-notation is what is called the asymptotic notation i determines the upper (worst possible) limit of algorithm complexity, therefore we briefly assume that both **i** and **k** are equal to the greater of **i** and **k** and represents this value by **n**.
 
@@ -43,7 +43,7 @@ In practice, it may happen that the variables **i** and **k** will have some val
 
 We always define complexity for the pessimistic case, the worst - this is the asymptotic nature of O-notation. We are considering the value of the asymptote, which is unlikely to happen, but in the worst-case scenario, this is what will happen. In this situation, after replacing **i** and **k** with unknown **n**, we see that the computational complexity of the algorithm will be:
 
-**O(n * n), i.e. O(n ^ 2)**
+<center>O(n * n), i.e. O(n ^ 2)</center>
 
 The computational complexities of the algorithms encountered in practice, arranged in order from the best (fastest algorithm) to the weakest (slowest algorithm), are presented below:
 

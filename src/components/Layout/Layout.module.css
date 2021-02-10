@@ -24,6 +24,10 @@ body {
   font-size: 5em;
 }
 
+.main h2 {
+  font-size: 3em;
+}
+
 .main p {
   font-size: 2em;
   text-align: center;
@@ -37,5 +41,11 @@ body {
 }
 
 .main strong {
+  color: rgb(50, 69, 133);
+}
+
+.main center {
+  font-size: 2em;
+  font-weight: bold;
   color: rgb(50, 69, 133);
 }
