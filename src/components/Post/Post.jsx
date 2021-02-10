@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 
 import classes from "./Post.module.css";
 
-const Post = ({ title, author, date, description, path, featured }) => (
+const Post = ({ title, author, date, excerpt, description, path, featured, timeToRead }) => (
   <div className={classes.post}>
     <h3 className={classes.post__title}>{ title }</h3>
     {featured && (
@@ -13,9 +13,9 @@ const Post = ({ title, author, date, description, path, featured }) => (
       alt={title}
     />
     )}
-    <p className={classes.post__description}>{ description }</p>
+    <p className={classes.post__description}>{ excerpt }</p>
     <p className={classes.post__author}>
-      Written by { author } on { date }
+      Written by { author } on { date } <span> / </span>{" "} { timeToRead } min read
     </p>
     <Link to={ path }>Read more</Link>
   </div>

@@ -1,29 +1,21 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import Img from "gatsby-image"
-
 
 import Layout from "../../components/Layout/Layout"
 import classes from "./blogTemplate.module.css"
 
 export default function Template({ data }) {
   const post = data.markdownRemark
-  const { title, author, date, featured } = post.frontmatter
+  const { title, author, date } = post.frontmatter
 
   return (
     <div className={classes.blogTemplate}>
       <Layout>
         <Link to="/blog" className={classes.blogTemplate__link}>Back to all blogs</Link>
-        {featured && (
-        <Img
-        className={classes.blogTemplate__img}
-        fluid={featured.childImageSharp.fluid}
-        alt={title}
-        />
-        )}
-        <h1 className={classes.blogTemplate__title}>{title}</h1>
+        <h1 className={classes.blogTemplate__title}>{title}</h1> 
         <p className={classes.blogTemplate__author}>
-          Posted by {author} on {date}
+          Posted by {author} on {date} <span> / </span>{" "}
+          { post.timeToRead } min read
         </p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </Layout>
@@ -33,7 +25,7 @@ export default function Template({ data }) {
 
 export const postQuery = graphql`
   query BlogPost($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+    markdownRemark(frontmatter: { path: { eq: $path }}, excerpt: {}, timeToRead: {}) {
       frontmatter {
         title
         path
@@ -44,10 +36,12 @@ export const postQuery = graphql`
             fluid(maxWidth: 750) {
               ...GatsbyImageSharpFluid
             }
-          }
+          }                                           
         }
       }
       html
+      excerpt
+      timeToRead
     }
   }
 `

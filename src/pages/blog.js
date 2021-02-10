@@ -4,21 +4,23 @@ import { graphql } from "gatsby";
 import Layout from '../components/Layout/Layout'
 import Post from '../components/Post/Post'
 
+
 const Blog = ({ data }) => (
   <Layout>
     <h1>Blog</h1>
     { 
       data.allMarkdownRemark.edges.map(post => {
-        const { title, author, date, description, path, featured } = post.node.frontmatter;
+        const { title, author, date, path, featured } = post.node.frontmatter;
         return (
           <Post
             title={title}
+            excerpt={post.node.excerpt}
             author={author}
             date={date}
-            description={description}
             key={`${date}__${title}`}
             path={path}
             featured={featured}
+            timeToRead={post.node.timeToRead}
           />
         )
       })
@@ -38,7 +40,6 @@ query AllBlogPosts {
           title
           author
           path
-          description
           featured {
             childImageSharp {
               fluid(maxWidth: 750) {
@@ -47,6 +48,8 @@ query AllBlogPosts {
             }
           }
         }
+        timeToRead
+        excerpt
       }
     }
   }
