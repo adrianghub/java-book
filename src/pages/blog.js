@@ -48,7 +48,7 @@ export const AllBlogsQuery = graphql`
             }
           }
           timeToRead
-          excerpt
+          excerpt(pruneLength: 100)
         }
       }
     }

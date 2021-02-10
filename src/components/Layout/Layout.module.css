@@ -30,3 +30,12 @@ body {
   max-width: 770px;
   margin: 20px auto;
 }
+
+.main ul {
+  list-style: none;
+  font-size: 2em; 
+}
+
+.main strong {
+  color: rgb(50, 69, 133);
+}
