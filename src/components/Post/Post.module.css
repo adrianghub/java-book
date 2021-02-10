@@ -2,6 +2,14 @@
   margin-bottom: 80px;
   padding-bottom: 80px;
   border-bottom: 2px solid white;
+  margin-left: 20px;
+  position: relative;
+}
+
+.post__featured {
+  max-height: 330px;
+  max-width: 770px;
+  margin: 0 auto;
 }
 
 .post__title {
@@ -9,19 +17,39 @@
   margin: 0;
 }
 
-.post__description {
+.post__excerpt {
   font-size: 1.5em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
 }
 
-.post .post__author {
+.post .post__meta {
   font-size: 1em;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.post__button {
+  font-size: 14px;
+  font-weight: 300;
+  padding: 20px 0;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 .post a {
   background-color: #fff;
-  color: #371A2B;
+  color: #371a2b;
   padding: 16px 24px;
   text-decoration: none;
   margin-top: 16px;
   display: inline-block;
+  transition: all 0.3s;
+}
+
+.post a:hover {
+  color: #fff;
+  border-color: #222;
+  background-color: #222;
 }

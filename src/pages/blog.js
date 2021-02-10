@@ -1,17 +1,16 @@
-import React from "react";
-import { graphql } from "gatsby";
+import React from "react"
+import { graphql } from "gatsby"
 
-import Layout from '../components/Layout/Layout'
-import Post from '../components/Post/Post'
-
+import Layout from "../components/Layout/Layout"
+import Post from "../components/Post/Post"
 
 const Blog = ({ data }) => (
   <Layout>
     <h1>Blog</h1>
-    { 
-      data.allMarkdownRemark.edges.map(post => {
-        const { title, author, date, path, featured } = post.node.frontmatter;
-        return (
+    {data.allMarkdownRemark.edges.map(post => {
+      const { title, author, date, path, featured } = post.node.frontmatter
+      return (
+        <div style={{display:'flex'}}>
           <Post
             title={title}
             excerpt={post.node.excerpt}
@@ -22,36 +21,36 @@ const Blog = ({ data }) => (
             featured={featured}
             timeToRead={post.node.timeToRead}
           />
-        )
-      })
-    }
+        </div>
+      )
+    })}
   </Layout>
-);
+)
 
-export default Blog;
+export default Blog
 
 export const AllBlogsQuery = graphql`
-query AllBlogPosts {
-  allMarkdownRemark {
-    edges {
-      node {
-        frontmatter {
-          date(formatString: "DD MMMM, YYYY")
-          title
-          author
-          path
-          featured {
-            childImageSharp {
-              fluid(maxWidth: 750) {
-                ...GatsbyImageSharpFluid
+  query AllBlogPosts {
+    allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            date(formatString: "DD MMMM, YYYY")
+            title
+            author
+            path
+            featured {
+              childImageSharp {
+                fluid(maxWidth: 750) {
+                  ...GatsbyImageSharpFluid
+                }
               }
             }
           }
+          timeToRead
+          excerpt
         }
-        timeToRead
-        excerpt
       }
     }
   }
-}
 `
