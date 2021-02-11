@@ -5,10 +5,11 @@
 
 .blogTemplate .blogTemplate__author {
   font-size: 1.2em;
+  text-align: center;
 }
 
 .blogTemplate .blogTemplate__link {
-  color: #fff;
+  color: #333;
 }
 
 .blogTemplate .blogTemplate__img {

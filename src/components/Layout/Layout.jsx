@@ -1,12 +1,16 @@
 import React from "react";
 
-import Nav from "../Nav/Nav";
-import classes from './Layout.module.css'
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
+import classes from './Layout.module.scss'
+import '../styles/style.scss'
+
 
 const Layout = ({ children }) => (
   <>
-    <Nav />
+    <Header />
     <main className={classes.main}>{ children }</main>
+    <Footer />
   </>
 );
 

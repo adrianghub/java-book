@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import Img from "gatsby-image"
 
-import classes from "./Post.module.css";
+import classes from "./Post.module.scss";
 
 const Post = ({ title, author, date, excerpt, path, featured, timeToRead }) => (
   <div className={classes.post}>
