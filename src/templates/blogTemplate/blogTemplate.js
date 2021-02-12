@@ -18,7 +18,7 @@ export default function Template({ data }) {
           { post.timeToRead } min read
         </p>
         <div className={classes.blogTemplate__content} dangerouslySetInnerHTML={{ __html: post.html }} />
-        ~ { author }
+       <p className={classes.blogTemplate__authorBottom}> ~ { author } </p>
       </Layout>
     </div>
   )

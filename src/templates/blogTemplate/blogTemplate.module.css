@@ -21,3 +21,9 @@
   margin: 20px 0;
   text-align: left;
 }
+
+.blogTemplate .blogTemplate__authorBottom {
+  font-size: 1rem;
+  margin-top: 20px;
+  text-align: right;
+}

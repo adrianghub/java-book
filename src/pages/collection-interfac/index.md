@@ -1,7 +1,7 @@
 ---
 path: '/collection-interface'
 date: '2021-02-10'
-title: 'Collection Interface'
+title: 'Collection Interface Part 1'
 author: 'Adrian Zinko'
 featured: "../../images/howtolearn.jpg"
 ---
@@ -14,29 +14,47 @@ Let's consider what it is like in the real world - a collection can be, for exam
 
 In programming, it is similar - a collection is a set of objects on which we can perform operations: adding an object to a collection, removing objects from a collection, and viewing objects included in the collection. Collections can be ordered (e.g., alphabetically) or disordered.
 
-## Console log?
+## Types of Collections
+
+Collections can be organized in a variety of ways. The simplest type of collection is a list, which roughly corresponds to postage stamps arranged sequentially according to price in a cluster (ordered collection).
+
+Another type of collection is a set, which corresponds to postage stamps placed loosely in a box (unordered collection), and yet another type is a map.
+
+A map is a collection of key-value or key-value elements. How to understand? Imagine a library with books. Each book is assigned a library signature number, i.e. a unique book identifier. In programming, we call such an identifier a key.
+
+If we look at a library with books, it is a collection of the map type, because it unambiguously maps (maps) book identifiers (keys) to the books themselves (i.e. objects or, in other words - values). In such a collection we can search both by key and by object (value). You will learn more about maps later in the module.
+
+## Popular libraries
+
+
+The standard Java libraries include (the most frequently used):
+
+`java.io` - a library used to perform tasks related to data exchange, inter alia, by reading and writing to a file (io - abbreviation for Input / Output, input / output),
+`java.net` - a library for communicating via the Internet,
+`java.lang` - basic Java library. This library does not have to be imported into written classes - it is included by default by the Java compiler to each class,
+`java.util` - library containing a set of tools for manipulating on collections, dates and calendars.
+The full list of libraries included in Java 14 SE is available in the Java documentation at this [link](https://docs.oracle.com/en/java/javase/14/).
+
+The list of interfaces and classes provided by individual libraries is also available in the Java documentation at the location indicated above. For example, a full description of the `java.util` library content can be found at this [link](https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/util/package-summary.html).
+
+Of course, you don't have to memorize it - a programmer most often works with the documentation at hand and looks at it often when he needs something. However, it is worth knowing the basic elements of libraries, if only to know that they are in these libraries and to know in which part of the documentation to look for details.
+
+Tools for manipulating collections are contained in the `java.util` library.
+## java.util library
+
+In the `java.util` library there are interfaces for handling collections. The most important of them are:
+
+- interface `Collection` - the basic interface for a collection,
+- interface `List` - interface for collections implemented as lists (inherits from the `Collection` interface),
+- interface `Map` - interface for collections realized as maps.
+As you already know, an interface is just a "contract" definition, that is, it defines what methods can be called in classes that implement the interface.
+
+The `java.util` package also includes a collection of classes for collections that implement the `List` and `Map` interfaces mentioned above. What exactly are these classes, you will find out in a moment.
+
+The above-mentioned interfaces are of course not all the collection mechanisms that can be found in the `java.util` library. However, the knowledge of the above is crucial, and the others are their various modifications, mutations and extensions.
+
+## Attaching the library
 
 ```java
-import java.util.*;
-import java.lang.*;
-import java.io.*;
-
-/* Name of the class has to be "Main" only if the class is public. */
-class IterableTest
-{
-	public static void main (String[] args) throws java.lang.Exception
-	{
-		//Creating ArrayList, which implements the Iterable interface and fill it
-		ArrayList<String> theList = new ArrayList<String>();
-		theList.add("object 1");
-		theList.add("object 2");
-		theList.add("object 3");
-		theList.add("object 4");
-		theList.add("object 5");
-		//Displaying the list using Iterable interface and for-each loop
-		for(String theObject: theList){
-			System.out.println(theObject);
-		}
-	}
-}
+import java.util;
 ```
