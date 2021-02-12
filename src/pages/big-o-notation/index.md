@@ -1,9 +1,8 @@
 ---
 path: '/big-o'
-date: '2021-02-12'
-title: 'Interface Collection'
+date: '2021-02-10'
+title: 'Introduction to Big-O'
 author: 'Adrian Zinko'
-description: 'Beginners friendly introduction to Big-O Notation'
 featured: "../../images/howtolearn.jpg"
 ---
 
