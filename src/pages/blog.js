@@ -3,14 +3,15 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/Layout/Layout"
 import Post from "../components/Post/Post"
+import classes from '../styles/blog.module.scss'
 
 const Blog = ({ data }) => (
   <Layout>
     <h1>Blog</h1>
-    {data.allMarkdownRemark.edges.map(post => {
-      const { title, author, date, path, featured } = post.node.frontmatter
-      return (
-        <div style={{display:'flex'}}>
+    <div className={classes.wrapper}>
+      {data.allMarkdownRemark.edges.map(post => {
+        const { title, author, date, path, featured } = post.node.frontmatter
+        return (
           <Post
             title={title}
             excerpt={post.node.excerpt}
@@ -21,9 +22,9 @@ const Blog = ({ data }) => (
             featured={featured}
             timeToRead={post.node.timeToRead}
           />
-        </div>
-      )
-    })}
+        )
+      })}
+    </div>
   </Layout>
 )
 
