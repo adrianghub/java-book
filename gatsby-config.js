@@ -29,13 +29,16 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `JavaBook`,
+        short_name: `JavaBook`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
+        background_color: `#f44f18`,
+        theme_color: `#f44f18`,
+        display: `standalone`,
       },
+    },
+    {
+      resolve:`gatsby-plugin-offline`,
     },
     {
       resolve: `gatsby-source-filesystem`,
