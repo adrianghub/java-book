@@ -35,6 +35,7 @@ module.exports = {
         background_color: `#f44f18`,
         theme_color: `#f44f18`,
         display: `standalone`,
+        icon: `src/images/howtolearn.jpg`
       },
     },
     {
