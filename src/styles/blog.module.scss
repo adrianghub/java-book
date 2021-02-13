@@ -8,3 +8,30 @@
   }
 }
 
+.searchBox {
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: 600px) {
+    justify-content: flex-end;
+  }
+}
+
+.searchInput {
+
+  width: 90%;
+  padding: 10px;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  outline: none;
+
+  &:focus {
+    border: 2px solid #f44f18;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); 
+  }
+
+  @media (min-width: 600px) {
+    width: 40%;
+    font-size: 1.3rem;
+  }
+}

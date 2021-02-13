@@ -1,9 +1,11 @@
 ---
 path: '/collection-interface'
-date: '2021-02-10'
+date: '2021-02-12'
 title: 'Collection Interface Part 1'
+description: 'Collection Interface'
 author: 'Adrian Zinko'
 featured: "../../images/howtolearn.jpg"
+tags: 'java collection'
 ---
 
 ![how to learn](../../images/howtolearn.jpg)
