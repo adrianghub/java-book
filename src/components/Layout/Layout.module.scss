@@ -2,6 +2,8 @@
   padding: 24px;
   font-family: inherit;
   min-height: 90vh;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .main h1 {
@@ -14,7 +16,6 @@
 
 .main p {
   font-size: 1.3em;
-  margin: 20px auto;
 }
 
 .main ul {
@@ -31,7 +32,7 @@
   color: #4260c4;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 900px) {
   .main h1 {
     font-size: 5em;
   }

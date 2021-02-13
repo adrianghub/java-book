@@ -49,7 +49,7 @@ export const AllBlogsQuery = graphql`
             }
           }
           timeToRead
-          excerpt(pruneLength: 100)
+          excerpt(pruneLength: 80)
         }
       }
     }

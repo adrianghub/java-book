@@ -4,7 +4,13 @@
   border-bottom: 2px solid white;
   margin-left: 20px;
   position: relative;
+  width: 90%;
+
+  @media (min-width: 900px) {
+      width: 44%;
+  }
 }
+
 
 .post__featured {
   max-height: 330px;
@@ -13,13 +19,17 @@
 }
 
 .post__title {
-  font-size: 3em;
+  font-size: 2em!important;
   margin: 0;
   text-align: center;
+
+  @media (min-width: 1400px) {
+    font-size: 3em!important;
+}
 }
 
 .post__excerpt {
-  font-size: 1.5em;
+  font-size: 1.5em!important;
   font-weight: 300;
   letter-spacing: 0.02em;
   text-align: center;

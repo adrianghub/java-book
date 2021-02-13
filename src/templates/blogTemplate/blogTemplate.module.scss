@@ -1,0 +1,49 @@
+.blogTemplate .blogTemplate__title {
+  margin: 80px 0 24px;
+  text-align: center;
+}
+
+.blogTemplate .blogTemplate__author {
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.blogTemplate .blogTemplate__img {
+  margin: 20px 0;
+}
+
+.blogTemplate__content img {
+  margin: 0;
+}
+
+.blogTemplate__content h2 , 
+.blogTemplate__content p,
+.blogTemplate__content ul {
+  max-width: 100%;
+  margin: 10px auto;
+
+  @media (min-width: 600px) {
+    max-width: 80%;
+    margin: 20px auto;
+    text-align: justify;
+  }
+}
+
+
+
+.blogTemplate .blogTemplate__authorBottom {
+  font-size: 1rem;
+  margin-top: 20px;
+  text-align: right;
+}
+
+pre[class*="language-"] {
+  max-width: 100%;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+  @media (min-width: 600px) {
+    max-width: 80%;
+    margin: 0 auto;
+    border-radius: 5px;
+  }
+}
