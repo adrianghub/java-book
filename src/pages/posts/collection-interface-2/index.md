@@ -1,6 +1,6 @@
 ---
-path: '/collection-interface'
-date: '2021-02-12'
+path: '/collection-interface-2'
+date: '2021-02-14'
 title: 'Collection Interface Part 2 - ArrayList'
 description: 'Collection Interface'
 author: 'Adrian Zinko'
