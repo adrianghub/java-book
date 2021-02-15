@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 
+import javaSmallLogo from "../../images/java-without-bg.png"
 import Layout from "../../components/Layout/Layout"
 import classes from "./blogTemplate.module.scss"
 
@@ -23,7 +24,10 @@ export default function Template({ data }) {
           className={classes.blogTemplate__content}
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
-        <p className={classes.blogTemplate__authorBottom}> ~ {author} </p>
+        <p className={classes.blogTemplate__authorBottom}>
+          <div style={{display: 'flex', justifyContent: "flex-end"}}>
+          <span style={{fontSize: '16px', marginRight: '5px'}}>~ {author}</span><img style={{maxWidth: '16px'}}src={javaSmallLogo} alt="small red java" />
+          </div></p>
       </Layout>
     </div>
   )
