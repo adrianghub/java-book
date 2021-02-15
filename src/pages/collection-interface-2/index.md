@@ -66,7 +66,7 @@ __We cannot mix different types in a collection - all items in a collection must
 
 This strange notation (i.e. `<String>` after the class name) is necessary because the ArrayList class uses the so-called generic types. You will learn more about generic types in later modules - for now, just remember that in the case of a collection, after the class name (or the interface name), you should specify the types of objects that will be stored in the collection in angle brackets.
 
-__The objects stored in the collection must be object types - they cannot be base types such as int, boolean, and the like. Instead, use the corresponding object types (ie the wrappers we've just learned): Integer, Boolean, etc. The exception here is the String type, which is always an object type and does not exist as a base type.__
+__The objects stored in the collection must be object types - they cannot be primitive types such as int, boolean, and the like. Instead, use the corresponding object types, ie the wrappers: Integer, Boolean, etc. The exception here is the String type, which is always an object type and does not exist as a base type.__
 
 The program we have just discussed is divided into three functional parts:
 
