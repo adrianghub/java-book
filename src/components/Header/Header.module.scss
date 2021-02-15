@@ -10,14 +10,28 @@
 
 .hero-content {
   position: absolute;
-  top: 35%;
+  top: 25%;
   margin: 0;
   text-align: center;
   width: 100%;
   text-transform: uppercase;
+
+  @media (min-width: 600px) {
+    top: 35%;
+  }
+}
+
+.hero-link {
+
+  @media (min-width:600px) {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .brand {
+  display: flex;
+  justify-content: center;
   margin: 0;
   padding: 0 0 10px;
   font-size: 5rem;
