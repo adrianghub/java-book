@@ -1,16 +1,14 @@
 import React from "react"
+
+import javaSmallLogo from '../images/java-without-bg.png';
+
 import Layout from "../components/Layout/Layout"
 
 const Home = () => (
   <Layout>
-    <h1>java.book</h1>
-
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea dignissimos
-      aut consequuntur aspernatur corrupti ratione, odit similique tenetur
-      accusantium, est nostrum esse minus iure voluptatum nihil cumque
-      blanditiis non? Odit.
-    </p>
+    <div style={{display: "flex",justifyContent: "center"}}>
+      <img style={{maxWidth: '100%'}} src={javaSmallLogo} alt=""/>
+      </div>
   </Layout>
 )
 
