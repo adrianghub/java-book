@@ -47,7 +47,7 @@ class ArrayListTest
 		library.add("Neverending Story");
 		library.add("The Jungle Book");
 		
-		System.out.println(library.size());
+		System.out.println(library.size()); // [17]
 	}
 }
 ```
@@ -71,7 +71,7 @@ __The objects stored in the collection must be object types - they cannot be bas
 The program we have just discussed is divided into three functional parts:
 
 - creating an ArrayList collection (line [1]),
-- filling the collection with data using the add (Object o) method (lines [2] - [16]),
+- filling the collection with data using the add (Object o) method,
 - checking if the collection contains the data entered into it by displaying its current size using the size() method (line [17]).
 
 Following script: 
@@ -82,15 +82,15 @@ is often replaced by such a notation:
 
 `List<String> library = new ArrayList<>();`
 
-where the variable's type is List, not ArrayList. As you remember, List is an interface. If the type of the variable is interface, it means that you can assign to it an object of any class that implements that interface. The latter writing method is better and more often used in real programming.
+where the variable's type is `List`, not `ArrayList`. As you remember, `List` is an interface. If the type of the variable is interface, it means that you can assign to it an object of any class that implements that interface. The latter writing method is better and more often used in real programming.
 
 ## Retreving data stored in a collection of the ArrayList type
 
-How can we operate on the data stored in the collection? First, let's think about reading the data. As mentioned earlier, we can refer to collection objects using the get (int index) method, giving the number (index) of the collection element as an argument.
+How can we operate on the data stored in the collection? First, let's think about reading the data. As mentioned earlier, we can refer to collection objects using the `get (int index)` method, giving the number (index) of the collection element as an argument.
 
 Let's modify the program so that after filling the collection, all its contents will be displayed in the console.
 
-We'll use a for loop for this. With this loop we will go through all the elements of the collection and display each of them. We will use the fact that we know the size of the collection - the size () method tells us about it. We'll use it in the loop condition to see if we've reached the end of the collection while rendering. Take a look at the code below:
+We'll use a for loop for this. With this loop we will go through all the elements of the collection and display each of them. We will use the fact that we know the size of the collection - the `size ()` method tells us about it. We'll use it in the loop condition to see if we've reached the end of the collection while rendering. Take a look at the code below:
 
 ```java
 import java.util.*;
@@ -126,7 +126,7 @@ class ArrayListAndForLoop {
 }
 ```
 
-Since all collections implement the Iterable interface, as mentioned earlier, we can also use a for-each loop which does not require us to reference the loop control variable. It is just called for each object in the collection. You can observe this solution in the following program:
+Since all collections implement the `Iterable` interface, as mentioned earlier, we can also use a for-each loop which does not require us to reference the loop control variable. It is just called for each object in the collection. You can observe this solution in the following program:
 
 ```java
 import java.util.*;
@@ -162,7 +162,7 @@ class Ideone
 }
 ```
 
-In the example above, let's recall how the for-each loop works. In each loop, another element from the library collection is inserted into the variable book of the String type. We then use the variable book to display the title of the book item in the library on the console screen. Note that we do not have an explicit item index number here.
+In the example above, let's recall how the __for-each__ loop works. In each loop, another element from the library collection is inserted into the variable book of the String type. We then use the variable book to display the title of the book item in the library on the console screen. Note that we do not have an explicit item index number here.
 
 ## Removing data from the ArrayList collection
 
@@ -172,7 +172,7 @@ To remove an item from a collection, use the `remove (int index)` method. The ar
 
 How is the array in which the collection internally stores data is reorganized? When it comes to removing the last element, the matter is simple: the size of the array is simply reduced by one.
 
-The more complicated situation is when you want to delete an item in the middle of a collection or at the beginning of it. If we delete an object with index n, then all objects in the collection in further positions (n + 1, n + 2, ...) must be moved up one place in the internal collection array (n + 1 in place n, n + 2 for n + 1, ...). After the elements are moved, the size of the array is reduced by one.
+The more complicated situation is when you want to delete an item in the middle of a collection or at the beginning of it. If we delete an object with index n, then all objects in the collection in further positions __(n + 1, n + 2, ...)__ must be moved up one place in the internal collection array __(n + 1 in place n, n + 2 for n + 1, ...)__. After the elements are moved, the size of the array is reduced by one.
 
 ## Adding data to the collection
 
@@ -180,17 +180,17 @@ A similar situation occurs when adding items to a collection. When we add a new 
 
 However, if we would like to add an element at the position marked with index zero (i.e. at the beginning of the internal collection table) or somewhere in the middle of the collection, then the execution of adding the object will be much longer, because this operation will consist in creating a new array, filling in the element with index zero, and then copying the entire existing table.
 
-The add (Object o) method, apart from the form presented earlier, also has a second form - a two-parameter add (int index, Object o). In the first parameter, we can specify the index number on which the object in the collection should be placed. For example, it might look like this:
+The `add (Object o)` method, apart from the form presented earlier, also has a second form - a two-parameter `add (int index, Object o)`. In the first parameter, we can specify the index number on which the object in the collection should be placed. For example, it might look like this:
 
 ```java
 library.add(0, "Metro 2020");
 ```
 
-Following this instruction, the "Metro 2020" object will be added to the collection at the very beginning of the collection (at the position with index 0).
+Following this instruction, the __"Metro 2020"__ object will be added to the collection at the very beginning of the collection (at the position with index 0).
 
 ## Summarize ArrayList
 
-When is it worth using an ArrayList collection? It is definitely the most convenient for small data sets. It is also very simple - it works practically like the boards you already know.
+When is it worth using an `ArrayList` collection? It is definitely the most convenient for small data sets. It is also very simple - it works practically like the arrays you already know.
 
-However, it is not recommended when you want to insert or remove items from the middle or the beginning of a large collection, as these operations will take a long time. In this situation, a LinkedList list collection will be better suited.
+However, it is not recommended when you want to insert or remove items from the middle or the beginning of a large collection, as these operations will take a long time. In this situation, a `LinkedList` list collection will be better suited.
 
