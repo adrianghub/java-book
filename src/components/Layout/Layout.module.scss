@@ -6,18 +6,22 @@
 }
 
 .main h1 {
-  font-size: 3em;
+  font-size: 2.6em;
 }
 
 .main h2 {
   font-size: 2em;
 }
 
+.main h3 {
+  font-size: 1.6em;
+}
+
 .main p {
   font-size: 1.3em;
 }
 
-.main ul {
+.main ul, .main ol {
   font-size: 1.3em; 
 }
 
@@ -33,22 +37,22 @@
 
 @media (min-width: 900px) {
   .main h1 {
-    font-size: 5em;
+    font-size: 3.2em;
   }
   
   .main h2 {
-    font-size: 3em;
+    font-size: 2.4em;
+  }
+
+  .main h3 {
+    font-size: 1.8em;
   }
   
-  .main p {
-    font-size: 2em;
-  }
-  
-  .main ul {
-    font-size: 2em; 
+  .main p, .main ul, .main ol {
+    font-size: 1.6em;
   }
   
   .main center {
-    font-size: 2em;
+    font-size: 1.6em;
   }
 }

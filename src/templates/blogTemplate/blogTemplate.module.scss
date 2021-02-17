@@ -16,9 +16,12 @@
   margin: 0;
 }
 
-.blogTemplate__content h2 , 
+.blogTemplate__content h2 ,
+.blogTemplate__content h3, 
 .blogTemplate__content p,
-.blogTemplate__content ul {
+.blogTemplate__content ul,
+.blogTemplate__content ol 
+ {
   max-width: 100%;
   margin: 10px auto;
 
