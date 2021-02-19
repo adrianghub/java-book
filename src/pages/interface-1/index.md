@@ -1,8 +1,8 @@
 ---
 path: '/interface-1'
 date: '2021-02-17'
-title: 'Interface - Part 1'
-description: 'Interface part 1'
+title: 'Interface'
+description: 'Interface'
 author: 'Adrian Zinko'
 featured: "../../images/howtolearn.jpg"
 tags: 'java interface'
@@ -10,7 +10,7 @@ tags: 'java interface'
 
 ![features of java](../../images/features-of-java.png)
 
-## Interface - Part 1
+## Interface
 
 An interface can be described as a set of requirements that we set to a class about its methods that it should contain.
 
