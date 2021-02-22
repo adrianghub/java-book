@@ -8,7 +8,7 @@ featured: "../../images/howtolearn.jpg"
 tags: 'java collection interface iterable while for-each'
 ---
 
-![how to learn](../../images/howtolearn.jpg);
+![how to learn](../../images/howtolearn.jpg)
 
 ## Iterator Interface
 
