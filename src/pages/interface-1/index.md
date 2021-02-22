@@ -8,7 +8,7 @@ featured: "../../images/howtolearn.jpg"
 tags: 'java interface'
 ---
 
-![features of java](../../images/features-of-java.png)
+![how to learn](../../images/howtolearn.jpg);
 
 ## Interface
 
