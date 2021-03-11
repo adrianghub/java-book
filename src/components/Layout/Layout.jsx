@@ -9,7 +9,7 @@ import '../../styles/style.scss'
 const Layout = ({ children }) => (
   <>
     <Header />
-    <main className={classes.main}>{ children }</main>
+    <main class={classes.main}>{ children }</main>
     <Footer />
   </>
 );

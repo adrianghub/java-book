@@ -9,19 +9,18 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-mdx-prismjs`,
     {
-      resolve: "gatsby-transformer-remark",
+      resolve: `gatsby-plugin-mdx`,
       options: {
-        plugins: [
+        extensions: [`.md`, `.mdx`],
+        defaultLayout: require.resolve('./src/templates/blogTemplate/blogTemplate.js'),
+        gatsbyRemarkPlugins: [
           {
-            resolve: "gatsby-remark-images",
+            resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 750,
-              linkImagesToOriginal: false,
+              maxWidth: 1200,
             },
-          },
-          {
-            resolve: `gatsby-remark-prismjs`,
           },
         ],
       },

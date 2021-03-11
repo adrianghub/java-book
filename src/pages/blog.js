@@ -6,7 +6,7 @@ import Post from "../components/Post/Post"
 import classes from "../styles/blog.module.scss"
 
 const Blog = ({ data }) => {
-  const allPosts = data.allMarkdownRemark.edges;
+  const allPosts = data.allMdx.edges;
 
   const emptyQuery = "";
 
@@ -18,7 +18,7 @@ const Blog = ({ data }) => {
   const handleInputChange = e => {
     const query = e.target.value
 
-    const posts = data.allMarkdownRemark.edges || []
+    const posts = data.allMdx.edges || []
 
     const filteredData = posts.filter(post => {
       const { description, title, tags } = post.node.frontmatter
@@ -85,9 +85,10 @@ export default Blog
 
 export const AllBlogsQuery = graphql`
   query AllBlogPosts {
-    allMarkdownRemark(sort: { order: DESC, fields: frontmatter___date }) {
+    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
+          tableOfContents
           timeToRead
           excerpt(pruneLength: 80)
           frontmatter {

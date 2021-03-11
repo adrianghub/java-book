@@ -1,12 +1,13 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
+import { MDXRenderer } from "gatsby-plugin-mdx"
 
 import javaSmallLogo from "../../images/java-without-bg.png"
 import Layout from "../../components/Layout/Layout"
 import classes from "./blogTemplate.module.scss"
 
 export default function Template({ data }) {
-  const post = data.markdownRemark
+  const post = data.mdx
   const { title, author, date } = post.frontmatter
 
   return (
@@ -20,10 +21,9 @@ export default function Template({ data }) {
           Posted by {author} on {date} <span> / </span> {post.timeToRead} min
           read
         </p>
-        <div
-          className={classes.blogTemplate__content}
-          dangerouslySetInnerHTML={{ __html: post.html }}
-        />
+        <MDXRenderer className={classes.blogTemplate__content}>
+          {post.body}
+        </MDXRenderer>
         <p className={classes.blogTemplate__authorBottom}>
           <div style={{display: 'flex', justifyContent: "flex-end"}}>
           <span style={{fontSize: '16px', marginRight: '5px'}}>~ {author}</span><img style={{maxWidth: '16px'}}src={javaSmallLogo} alt="small red java" />
@@ -35,7 +35,7 @@ export default function Template({ data }) {
 
 export const postQuery = graphql`
   query BlogPost($path: String!) {
-    markdownRemark(
+    mdx(
       frontmatter: { path: { eq: $path } }
       excerpt: {}
       timeToRead: {}
@@ -53,9 +53,10 @@ export const postQuery = graphql`
           }
         }
       }
-      html
+      body
       excerpt
       timeToRead
+      tableOfContents
     }
   }
 `
