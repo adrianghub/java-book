@@ -16,6 +16,10 @@
   margin: 0;
 }
 
+ul div h2 {
+  font-size: 2rem!important;
+}
+
 .blogTemplate__content h2 ,
 .blogTemplate__content h3, 
 .blogTemplate__content p,
@@ -40,9 +44,10 @@
   text-align: right;
 }
 
-pre[class*="language-"] {
+code[class*="language-"], pre[class*="language-"] {
   max-width: 100%;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  color: #fff;
 
   @media (min-width: 600px) {
     max-width: 80%;
