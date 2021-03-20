@@ -4,7 +4,7 @@ date: '2021-02-10'
 title: 'Introduction to Big-O'
 author: 'Adrian Zinko'
 description: 'Introduction to Big-O'
-featured: "../../images/howtolearn.jpg"
+featured: "../../../images/howtolearn.jpg"
 tags: "big-o"
 ---
 

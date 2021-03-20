@@ -3,7 +3,7 @@ path: '/wrappers'
 date: '2021-02-13'
 title: 'Wrappers'
 author: 'Adrian Zinko'
-featured: "../../images/howtolearn.jpg"
+featured: "../../../images/howtolearn.jpg"
 tags: 'java wrappers'
 ---
 

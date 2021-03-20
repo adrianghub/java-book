@@ -4,7 +4,7 @@ date: '2021-02-23'
 title: 'Java Collections Framework'
 description: 'Java Collections Framework'
 author: 'Adrian Zinko'
-featured: "../../images/howtolearn.jpg"
+featured: "../../../images/howtolearn.jpg"
 tags: 'java collection jcf java-collections-framework'
 ---
 

@@ -4,7 +4,7 @@ date: '2021-02-19'
 title: 'Abstract Class'
 description: 'Abstract Class'
 author: 'Adrian Zinko'
-featured: "../../images/howtolearn.jpg"
+featured: "../../../images/howtolearn.jpg"
 tags: 'java interface'
 ---
 

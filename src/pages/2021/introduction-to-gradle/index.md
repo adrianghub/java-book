@@ -4,7 +4,7 @@ date: '2021-03-10'
 title: 'Introduction to Gradle'
 description: 'Introduction to Gradle'
 author: 'Adrian Zinko'
-featured: "../../images/howtolearn.jpg"
+featured: "../../../images/howtolearn.jpg"
 tags: 'java gradle dependency test'
 ---
 

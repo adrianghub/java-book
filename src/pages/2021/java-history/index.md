@@ -4,7 +4,7 @@ date: '2021-02-15'
 title: 'Long story short...'
 description: 'Short story about Java'
 author: 'Adrian Zinko'
-featured: "../../images/howtolearn.jpg"
+featured: "../../../images/howtolearn.jpg"
 tags: 'java history lts'
 ---
 

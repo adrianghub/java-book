@@ -4,7 +4,7 @@ date: '2021-02-22'
 title: 'Iterator Interface'
 description: 'Iterator Interface'
 author: 'Adrian Zinko'
-featured: "../../images/howtolearn.jpg"
+featured: "../../../images/howtolearn.jpg"
 tags: 'java collection interface iterable while for-each'
 ---
 
