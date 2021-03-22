@@ -28,7 +28,7 @@
     "gatsby-source-filesystem": "^2.3.34",
     "gatsby-transformer-sharp": "^2.5.17",
     "loader-utils": "^2.0.0",
-    "netlify-cli": "^3.10.11",
+    "netlify-cli": "^3.13.4",
     "node-sass": "^5.0.0",
     "prism-react-renderer": "^1.2.0",
     "prismjs": "^1.23.0",
