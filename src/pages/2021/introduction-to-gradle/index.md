@@ -8,7 +8,7 @@ featured: "../../../images/howtolearn.jpg"
 tags: 'java gradle dependency test'
 ---
 
-![features of java](../../images/features-of-java.png)
+![features of java](../../../images/features-of-java.png)
 
 ## What is Gradle?
 

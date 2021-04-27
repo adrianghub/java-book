@@ -8,7 +8,7 @@ featured: "../../../images/howtolearn.jpg"
 tags: 'java history lts'
 ---
 
-![features of java](../../images/features-of-java.png)
+![features of java](../../../images/features-of-java.png)
 
 ## Long story short
 

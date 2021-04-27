@@ -8,7 +8,7 @@ featured: "../../../images/howtolearn.jpg"
 tags: "big-o"
 ---
 
-![how to learn](../../images/howtolearn.jpg)
+![how to learn](../../../images/howtolearn.jpg)
 
 ## What is Big-O Notation?
 

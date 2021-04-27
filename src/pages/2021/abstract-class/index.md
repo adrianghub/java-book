@@ -8,7 +8,7 @@ featured: "../../../images/howtolearn.jpg"
 tags: 'java interface'
 ---
 
-![features of java](../../images/features-of-java.png)
+![features of java](../../../images/features-of-java.png)
 
 ## What is an abstract class?
 

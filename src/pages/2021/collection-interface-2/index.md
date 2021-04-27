@@ -8,7 +8,7 @@ featured: "../../../images/howtolearn.jpg"
 tags: 'java collection arraylist linkedlist'
 ---
 
-![how to learn](../../images/howtolearn.jpg)
+![how to learn](../../../images/howtolearn.jpg)
 
 ## ArrayList
 

@@ -8,7 +8,7 @@ featured: "../../../images/howtolearn.jpg"
 tags: 'java collection'
 ---
 
-![how to learn](../../images/howtolearn.jpg)
+![how to learn](../../../images/howtolearn.jpg)
 
 ## Collection in real-life examples
 

@@ -8,7 +8,7 @@ featured: "../../../images/howtolearn.jpg"
 tags: 'java collection jcf java-collections-framework'
 ---
 
-![how to learn](../../images/jcf.png)
+![how to learn](../../../images/jcf.png)
 
 ## What is Java Collections Framework?
 

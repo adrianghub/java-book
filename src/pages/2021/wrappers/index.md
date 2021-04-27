@@ -7,7 +7,7 @@ featured: "../../../images/howtolearn.jpg"
 tags: 'java wrappers'
 ---
 
-![how to learn](../../images/howtolearn.jpg)
+![how to learn](../../../images/howtolearn.jpg)
 
 In Java, we deal with basic types (e.g. int, boolean, ...) or with object types (e.g. an object based on a class).
 
